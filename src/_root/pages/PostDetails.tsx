@@ -1,7 +1,7 @@
 import { useParams, Link, useNavigate } from "react-router-dom";
 
 import { Button } from "@/components/ui";
-import { Loader } from "@/components/shared";
+import { GridRePostList, Loader } from "@/components/shared";
 import { GridPostList, PostStats } from "@/components/shared";
 
 import {
@@ -147,7 +147,7 @@ const PostDetails = () => {
         {isUserPostLoading || !relatedPosts ? (
           <Loader />
         ) : (
-          <GridPostList posts={relatedPosts} />
+          <GridRePostList posts={relatedPosts} />
         )}
       </div>
     </div>
